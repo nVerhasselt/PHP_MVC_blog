@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: var(--font-family);
+}
+
+h1 {
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+}
+
+h2 {
+    padding-top: 2rem;
+}
+
+.row{
+    justify-content: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+    --font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+/* HOME */
+.home{
+    background-image: url("images/cheers.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* FORM */
+.formClass{
+    display: flex;
+    justify-content: center;
+}
+
+.form-group{
+    padding-bottom: 2rem;
+}
+
+/* ARTICLES */
+.articles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.articles-container{
+    border-top: solid;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.detail_article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* COMMENTAIRES */
+
+legend {
+    padding-top: 2rem;
+}
+
+/* FOOTER */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#reseaux{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+i{
+    padding: 1rem;
+}
