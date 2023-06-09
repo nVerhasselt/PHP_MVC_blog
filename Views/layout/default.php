@@ -70,8 +70,6 @@
             <a class="nav-link" href="#">Se connecter</a>
           </li>
 
-
-
         </ul>
         <form class="d-flex">
           <button class="btn btn-secondary my-2 my-sm-0" type="submit"> <a href="/articles/add"> Créer un article</a></button>
@@ -95,7 +93,7 @@
       <i class="fa-brands fa-square-twitter fa-2x"></i>
     </div>
 
-    <p>Nom du blog - tous droits réservés, 2023</p>
+    <p>Full Music - tous droits réservés, 2023</p>
 
   </footer>
 

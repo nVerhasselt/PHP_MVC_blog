@@ -19,7 +19,7 @@
             </div>
 
             <!-- COMMENTS -->
-            <section>
+            <section class="col-lg-12">
 
                 <h2>Commentaires</h2>
 
@@ -42,17 +42,14 @@
                                     <a href="/comments/remove/<?= $comment['id'] ?>">Supprimer</a>
                                 </button>
                             </div>
-                        </div>    
-
                     <?php endif; ?>
                 <?php endforeach; ?>
+                </div>
 
                 <!-- ADD COMMENT -->
-                <form action="/comments/add/<?= $article['id'] ?>" method="POST">
+                <form class="col-lg-12" action="/comments/add/<?= $article['id'] ?>" method="POST">
                     <fieldset>
                         <legend>Ajouter un commentaire</legend>
-
-
 
                         <div class="form-group">
                             <label for="content" class="form-label mt-4">Entrez votre commentaire :</label>
