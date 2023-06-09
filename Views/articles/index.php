@@ -1,5 +1,5 @@
 <section class="articles pt-lg-2">
-
+    
     <h1>Les derniers articles</h1>
 
     <div class="articles-container col-lg-8">

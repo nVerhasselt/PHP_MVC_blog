@@ -1,5 +1,3 @@
-
-
     <form>
         <fieldset>
             <legend>Créer un compte</legend>
@@ -30,9 +28,3 @@
                 </div>
         </fieldset>
     </form>
-
-<?php 
-
-
-
-?>

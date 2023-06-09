@@ -26,6 +26,7 @@
   <title><?= $title = isset($t) ? $t : 'default' ?></title>
 </head>
 
+
 <body>
   <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
     <div class="container-fluid">
@@ -40,11 +41,13 @@
             <a class="nav-link active" href="/">Accueil
             </a>
           </li>
+
 <?php  if (isset($articles) && isset($categories)) :?>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Catégories</a>
             <div class="dropdown-menu">
+              
 <?php foreach ($categories as $categorie):?>
               
               <a class="dropdown-item" href="/articles/displaycat/<?= $categorie['id']?>"><?= $categorie['name']?></a>

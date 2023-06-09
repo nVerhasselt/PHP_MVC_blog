@@ -1,5 +1,3 @@
-
-
     <form>
         <fieldset>
             <legend>Se connecter</legend>
@@ -20,7 +18,3 @@
                 </div>
         </fieldset>
     </form>
-
-<?php 
-
-?>
