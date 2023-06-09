@@ -26,11 +26,24 @@
                 <?php foreach ($comments as $comment) : ?>
                     <?php if ($comment['articles_id'] == $article['id']) : ?>
 
-                        
-                        <div class="comment">
-                            <p><?= $comment['date'] ?>/<?= $user['fName'] . $user['fName'] ?></p>
-                            <p><?= $comment['content'] ?></p><button type="button" class="btn btn-secondary" style="width:100px"><a href="/comments/remove/<?= $comment['id'] ?>">Supprime</a></button>
-                        </div>
+                        <!--COMMENT HEADER-->
+                        <div class="card bg-light mb-3"> 
+                            <div class="card-header">
+                                    <p><?= $comment['date'] ?>/<?= $user['fName'] . $user['fName'] ?></p>
+                            </div>
+
+                            <!--COMMENT BODY-->
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <?= $comment['content'] ?>
+                                </p>
+
+                                <button type="button" class="btn btn-secondary" style="width:100px">
+                                    <a href="/comments/remove/<?= $comment['id'] ?>">Supprimer</a>
+                                </button>
+                            </div>
+                        </div>    
+
                     <?php endif; ?>
                 <?php endforeach; ?>
 
