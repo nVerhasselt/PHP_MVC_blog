@@ -1,5 +1,4 @@
 /!\ IMPORTANT /!\
-
 I only worked on the wireframe (with Figma) and the style (with CSS and Bootstrap) on that project.
 
 It was a team work I have done with two collaborators at the end of my training around June 2023. 
