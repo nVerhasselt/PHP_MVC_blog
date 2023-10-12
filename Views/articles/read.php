@@ -23,9 +23,9 @@
                     <?php if ($comment['articles_id'] == $article['id']) : ?>
 
                         <!--COMMENT HEADER-->
-                        <div class="card bg-light mb-3"> 
+                        <div class="card bg-light mb-3">
                             <div class="card-header">
-                                    <p><?= $comment['date'] ?>/<?= $user['fName'] . $user['fName'] ?></p>
+                                <p><?= $comment['date'] ?>/<?= $user['fName'] . $user['fName'] ?></p>
                             </div>
 
                             <!--COMMENT BODY-->
@@ -37,26 +37,29 @@
                                 <button type="button" class="btn btn-secondary" style="width:100px">
                                     <a href="/comments/remove/<?= $comment['id'] ?>">Supprimer</a>
                                 </button>
-                        </div>
+                            </div>
 
-                    <?php endif; ?>
-                <?php endforeach; ?>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
 
-                <!-- ADD COMMENT -->
-                <form class="addComment col-lg-8" action="/comments/add/<?= $article['id'] ?>" method="POST">
-                    <fieldset>
-                        
-                        <legend>Ajouter un commentaire</legend>
+                    <!-- ADD COMMENT -->
 
-                        <div class="form-group">
-                            <label for="content" class="form-label mt-4">Entrez votre commentaire :</label>
-                            <textarea class="form-control" id="content" name="content" rows="3"></textarea>
-                        </div>
+                    <form class="addComment col-lg-8" action="/comments/add/<?= $article['id'] ?>" method="POST">
+                    
+                        <fieldset>
 
-                    </fieldset>
+                            <legend>Ajouter un commentaire</legend>
 
-                    <button type="submit" class="btn btn-primary">Envoyer votre commentaire</button>
-                </form>
+                            <div class="form-group">
+                                <label for="content" class="form-label mt-4">Entrez votre commentaire :</label>
+                                <textarea class="form-control" id="content" name="content" rows="3"></textarea>
+                            </div>
+
+                        </fieldset>
+
+                        <button type="submit" class="btn btn-primary">Envoyer votre commentaire</button>
+
+                    </form>
 
             </section>
 

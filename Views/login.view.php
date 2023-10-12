@@ -3,7 +3,7 @@
             <legend>Se connecter</legend>
         
                 <div class="form-group">
-                    <label for="email" class="form-label mt-4">Email address</label>
+                    <label for="email" class="form-label mt-4">Addresse e-mail</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                 </div>
 

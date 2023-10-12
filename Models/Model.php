@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-//on ajout euse par ce que on n'a pasdans le meme space
+
 use App\Core\Db;
 
 class Model extends Db
@@ -11,6 +11,7 @@ class Model extends Db
 
     // Instance de connexion
     private $db;
+    
     /**
      * Méthode qui exécutera les requêtes
      * @param string $sql Requête SQL à exécuter

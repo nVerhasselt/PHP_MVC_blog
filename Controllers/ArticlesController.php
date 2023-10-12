@@ -8,8 +8,20 @@ use App\Models\UsersModel;
 use App\Models\CategoriesModel;
 use App\Models\CommentsModel;
 
+/**
+ * The `class ArticlesController extends Controller` is defining a new class called `ArticlesController` that extends the `Controller` class. This means that the `ArticlesController` class inherits all the properties and methods of the `Controller` class and can also define its own properties and methods.
+ * 
+ * @class
+ * @name ArticlesController
+ * @extends Controller
+ */
 class ArticlesController extends Controller
 {
+
+    /**
+     * The `public function index()` is a method that retrieves all articles, users, and categories from their respective models and passes them to the `render()` method to display them on the `articles/index` view.
+     * 
+     */
     public function index()
     {
         $articleModel = new ArticlesModel;
@@ -28,21 +40,28 @@ class ArticlesController extends Controller
             'categories' => $categories
         ]);
     }
+
+    /**
+     * `public function displaycat($id)` is a method that retrieves all articles with a specific category ID, all users, and all categories from their respective models and passes them to the `render()` method to display them on the `articles/index` view. The category ID is passed as a parameter to the method.
+     * 
+     */
     public function displaycat($id)
     {
         $articleModel = new ArticlesModel;
         $articles = $articleModel->findBy(['categories_id' => $id]);
-$categoriesModel=new CategoriesModel;
-$categories=$categoriesModel->findAll();
+        $categoriesModel = new CategoriesModel;
+        $categories = $categoriesModel->findAll();
         $userModel = new UsersModel;
         $users = $userModel->findAll();
 
-        $this->render('articles/index', compact('articles', 'users','categories'));
+        $this->render('articles/index', compact('articles', 'users', 'categories'));
     }
 
-
-
-    public function read(int$id)
+    /**
+     * The `public function read(int $id)` method is retrieving a specific article with the given `$id` parameter from the `ArticlesModel`, as well as its associated category, user, and comments. It then passes these data to the `render()` method to display them on the `articles/read` view.
+     * 
+     */
+    public function read(int $id)
     {
 
         $articleModel = new ArticlesModel;
@@ -58,6 +77,11 @@ $categories=$categoriesModel->findAll();
 
         $this->render('articles/read', compact('article', 'categorie', 'user', 'comments'));
     }
+
+    /**
+     * The `public function add()` method is adding a new article to the database. It first checks if the form data submitted by the user is valid and if the user is logged in. If the data is valid and the user is logged in, it creates a new `ArticlesModel` object, sets its properties with the form data and the user ID, and calls the `create()` method to insert the new article into the database. Finally, it redirects the user to the `articles` page. If the form data is not valid or the user is not logged in, it simply renders the `articles/add` view with the list of categories.
+     * 
+     */
     public function add()
     {
 
@@ -83,6 +107,11 @@ $categories=$categoriesModel->findAll();
             compact('categories')
         );
     }
+
+    /**
+     * The `public function edit($id)` method is retrieving a specific article with the given `$id` parameter from the `ArticlesModel`. It then checks if the form data submitted by the user is valid and if the user is logged in. If the data is valid and the user is logged in, it updates the article with the new data and redirects the user to the `articles` page. If the form data is not valid or the user is not logged in, it simply renders the `articles/edit` view.
+     * 
+     */
     public function edit($id)
     {
         // On instancie le modèle
@@ -109,6 +138,11 @@ $categories=$categoriesModel->findAll();
 
         $this->render('articles/edit', compact('article', 'categories'));
     }
+
+    /**
+     * The `public function remove($id)` method is deleting a specific article with the given `$id` parameter from the `ArticlesModel`. It then redirects the user to the `articles` page.
+     * 
+     */
     public function remove($id)
     {
         $articleModel = new ArticlesModel;

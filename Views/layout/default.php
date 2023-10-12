@@ -42,21 +42,21 @@
             </a>
           </li>
 
-<?php  if (isset($articles) && isset($categories)) :?>
+          <?php if (isset($articles) && isset($categories)) : ?>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Catégories</a>
-            <div class="dropdown-menu">
-              
-<?php foreach ($categories as $categorie):?>
-              
-              <a class="dropdown-item" href="/articles/displaycat/<?= $categorie['id']?>"><?= $categorie['name']?></a>
-         <?php endforeach;?>    
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/articles">Tous les articles</a>
-            </div>
-          </li>
-          <?php endif;?>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Catégories</a>
+              <div class="dropdown-menu">
+
+                <?php foreach ($categories as $categorie) : ?>
+
+                  <a class="dropdown-item" href="/articles/displaycat/<?= $categorie['id'] ?>"><?= $categorie['name'] ?></a>
+                <?php endforeach; ?>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/articles">Tous les articles</a>
+              </div>
+            </li>
+          <?php endif; ?>
           <li class="nav-item">
             <a class="nav-link" href="/articles">Articles</a>
           </li>
@@ -96,7 +96,7 @@
       <i class="fa-brands fa-square-twitter fa-2x"></i>
     </div>
 
-    <p>Full Music - tous droits réservés, 2023</p>
+    <p>Full Music - Tous droits réservés, 2023</p>
 
   </footer>
 

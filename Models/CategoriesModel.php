@@ -2,7 +2,7 @@
 namespace App\Models;
 
 /**
- * Modèle pour la table "annonces"
+ * Modèle pour la table "categories"
  */
 class CategoriesModel extends Model
 {

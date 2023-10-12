@@ -1,8 +1,13 @@
 <?php
+
 namespace App\Models;
 
 /**
- * Modèle pour la table "annonces"
+ * The `class ArticlesModel` is extending the `Model` class, which means that it inherits all the properties and methods of the `Model` class. This allows the `ArticlesModel` class to have access to the database connection and query builder methods provided by the `Model` class.
+ * 
+ * @class
+ * @name ArticlesModel
+ * @extends Model
  */
 class ArticlesModel extends Model
 {
@@ -12,28 +17,30 @@ class ArticlesModel extends Model
     protected $date;
     protected $users_id;
     protected $categories_id;
-    
+
+    /**
+     * The `public function __construct()` is a constructor method that is called when an object of the `ArticlesModel` class is created. It sets the `$table` property of the `ArticlesModel` class to `'articles'`.
+     * 
+     */
     public function __construct()
     {
         $this->table = 'articles';
     }
-/** on utilise des setteures et des getteurs parce que on met les atrributs en protected
- * donc on ne peux l'acceder que par le bies des setteurs et getteurs
- */
+
     /**
-     * Obtenir la valeur de id
-     */ 
-    public function getId():int
+     * The `public function getId(): int` is a getter method that returns the value of the `$id` property of the `ArticlesModel` class, and specifies that the return type of the method is `int`.
+     * 
+     */
+    public function getId(): int
     {
         return $this->id;
     }
 
     /**
-     * Définir la valeur de id
-     *
-     * @return  self
-     */ 
-    public function setId(int $id):self
+     * The `public function setId(int $id): self` is a setter method that sets the value of the `$id` property of the `ArticlesModel` class to the value passed as an argument to the method. The method returns the current object instance (`$this`) to allow for method chaining. The `int` type hint specifies that the argument passed to the method must be an integer. The `self` return type hint specifies that the method returns an instance of the current class (`ArticlesModel`).
+     * 
+     */
+    public function setId(int $id): self
     {
         $this->id = $id;
 
@@ -41,19 +48,19 @@ class ArticlesModel extends Model
     }
 
     /**
-     * Obtenir la valeur de titre
-     */ 
-    public function getTitle():string
+     * The `public function getTitle(): string` is a getter method that returns the value of the `$title` property of the `ArticlesModel` class, and specifies that the return type of the method is `string`.
+     * 
+     */
+    public function getTitle(): string
     {
         return $this->title;
     }
 
     /**
-     * Définir la valeur de titre
-     *
-     * @return  self
-     */ 
-    public function setTitle(string $title):self
+     * The `public function setTitle(string $title): self` is a setter method that sets the value of the `$title` property of the `ArticlesModel` class to the value passed as an argument to the method. The method returns the current object instance (`$this`) to allow for method chaining. The `string` type hint specifies that the argument passed to the method must be a string. The `self` return type hint specifies that the method returns an instance of the current class (`ArticlesModel`).
+     * 
+     */
+    public function setTitle(string $title): self
     {
         $this->title = $title;
 
@@ -61,19 +68,19 @@ class ArticlesModel extends Model
     }
 
     /**
-     * Obtenir la valeur de content
-     */ 
-    public function getContent():string
+     * The `public function getContent(): string` is a getter method that returns the value of the `$content` property of the `ArticlesModel` class, and specifies that the return type of the method is `string`.
+     * 
+     */
+    public function getContent(): string
     {
         return $this->content;
     }
 
     /**
-     * Définir la valeur de content
-     *
-     * @return  self
-     */ 
-    public function setContent(string $content):self
+     * The `public function setContent(string $content): self` is a setter method that sets the value of the `$content` property of the `ArticlesModel` class to the value passed as an argument to the method. The method returns the current object instance (`$this`) to allow for method chaining. The `string` type hint specifies that the argument passed to the method must be a string. The `self` return type hint specifies that the method returns an instance of the current class (`ArticlesModel`).
+     * 
+     */
+    public function setContent(string $content): self
     {
         $this->content = $content;
 
@@ -81,19 +88,19 @@ class ArticlesModel extends Model
     }
 
     /**
-     * Obtenir la valeur de date
-     */ 
+     * The `public function getDate()` is a getter method that returns the value of the `$date` property of the `ArticlesModel` class.
+     * 
+     */
     public function getDate()
     {
         return $this->date;
     }
 
     /**
-     * Définir la valeur de date
-     *
-     * @return  self
-     */ 
-    public function setDate($date):self
+     * `public function setDate($date): self` is a setter method that sets the value of the `$date` property of the `ArticlesModel` class to the value passed as an argument to the method. The method returns the current object instance (`$this`) to allow for method chaining. The `self` return type hint specifies that the method returns an instance of the current class (`ArticlesModel`).
+     * 
+     */
+    public function setDate($date): self
     {
         $this->date = $date;
 
@@ -101,34 +108,40 @@ class ArticlesModel extends Model
     }
 
     /**
-     * Obtenir la valeur de Categories_id
-     */ 
-    
-	public function getCategories_id() {
-		return $this->categories_id;
-	}
-/**
-     * Définir la valeur de categoties_id
-     *
-     * @return  self
-     */ 
-	public function setCategories_id($value) {
-		$this->categories_id = $value;
+     * The `public function getCategories_id()` is a getter method that returns the value of the `$categories_id` property of the `ArticlesModel` class.
+     * 
+     */
+    public function getCategories_id()
+    {
+        return $this->categories_id;
+    }
+
+    /**
+     * The `public function setCategories_id($value)` is a setter method that sets the value of the `$categories_id` property of the `ArticlesModel` class to the value passed as an argument to the method. It then returns the current object instance (`$this`) to allow for method chaining.
+     * 
+     */
+    public function setCategories_id($value)
+    {
+        $this->categories_id = $value;
         return $this;
-	}
-/**
-     * Obtenir la valeur de users_id
-     */ 
-    
-	public function getUsers_id() {
-		return $this->users_id;
-	}
-/**
-     * Définir la valeur de users_id
-     */ 
-    
-	public function setUsers_id($value) {
-		$this->users_id = $value;
+    }
+
+    /**
+     * The `public function getUsers_id()` is a getter method that returns the value of the `$users_id` property of the `ArticlesModel` class.
+     * 
+     */
+    public function getUsers_id()
+    {
+        return $this->users_id;
+    }
+
+    /**
+     * The `public function setUsers_id($value)` is a setter method that sets the value of the `$users_id` property of the `ArticlesModel` class to the value passed as an argument to the method. It then returns the current object instance (`$this`) to allow for method chaining.
+     * 
+     */
+    public function setUsers_id($value)
+    {
+        $this->users_id = $value;
         return $this;
-	}
+    }
 }
